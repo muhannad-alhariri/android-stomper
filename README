@@ -1,0 +1,8 @@
+Android-Stomper is an implementation for STOMP protocol for android
+
+A Library based on StompJ on googlr groups 
+
+
+
+* It has been tested with ActiveMQ stomp and ssl+stomp 
+* supports Server authentication with username and password
