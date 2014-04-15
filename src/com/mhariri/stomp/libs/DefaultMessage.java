@@ -1,14 +1,17 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   DefaultMessage.java
 
 package com.mhariri.stomp.libs;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Set;
-/**
- * @
- * @author muhannad
- *
- */
+
+// Referenced classes of package pk.aamir.stompj:
+//            Message
+
 public class DefaultMessage implements Message {
 
 	public DefaultMessage() {

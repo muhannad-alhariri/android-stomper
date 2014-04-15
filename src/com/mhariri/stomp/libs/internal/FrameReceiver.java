@@ -1,3 +1,7 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   FrameReceiver.java
 
 package com.mhariri.stomp.libs.internal;
 
@@ -14,10 +18,14 @@ import com.mhariri.stomp.libs.ErrorMessage;
 import com.mhariri.stomp.libs.MessageHandler;
 import com.mhariri.stomp.libs.StompJRuntimeException;
 
+
+// Referenced classes of package pk.aamir.stompj.internal:
+//            MessageImpl, StompJSession, ErrorImpl
+
 public class FrameReceiver extends Thread {
 	private volatile boolean mRun = true;
 
-	public FrameReceiver(StompSession session, InputStream input, Map handlers) {
+	public FrameReceiver(StompJSession session, InputStream input, Map handlers) {
 		this.session = session;
 		this.input = input;
 		messageHandlers = handlers;
@@ -178,7 +186,7 @@ public class FrameReceiver extends Thread {
 		return bos.toByteArray();
 	}
 
-	private StompSession session;
+	private StompJSession session;
 	private InputStream input;
 	private String sessionId;
 	private Map messageHandlers;

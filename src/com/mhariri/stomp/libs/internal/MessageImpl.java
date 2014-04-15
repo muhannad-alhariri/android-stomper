@@ -1,3 +1,7 @@
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   MessageImpl.java
 
 package com.mhariri.stomp.libs.internal;
 
@@ -5,7 +9,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
 import com.mhariri.stomp.libs.Message;
-
 
 public class MessageImpl implements Message {
 

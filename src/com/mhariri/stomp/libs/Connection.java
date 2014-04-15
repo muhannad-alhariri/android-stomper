@@ -1,4 +1,7 @@
-
+// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Connection.java
 
 package com.mhariri.stomp.libs;
 
@@ -8,9 +11,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 import com.mhariri.stomp.libs.internal.MessageImpl;
-import com.mhariri.stomp.libs.internal.StompSession;
-
-
+import com.mhariri.stomp.libs.internal.StompJSession;
+// Referenced classes of package pk.aamir.stompj:
+//            StompJException, MessageHandler, ErrorHandler, ErrorMessage, 
+//            Message
 
 public class Connection {
 
@@ -24,12 +28,16 @@ public class Connection {
 
 	public Connection(String host, int port, String userid, String password) {
 		messageHandlers = new ConcurrentHashMap();
-		session = new StompSession(host, port, userid, password, this,
+		session = new StompJSession(host, port, userid, password, this,
 				messageHandlers);
 	}
 
 	public ErrorMessage connect() throws StompJException {
 		return session.connect();
+	}
+
+	public ErrorMessage connectToSSL() throws StompJException {
+		return session.connectToSSL();
 	}
 
 	public void disconnect() {
@@ -89,7 +97,7 @@ public class Connection {
 		errorHandler = handler;
 	}
 
-	private StompSession session;
+	private StompJSession session;
 	private ConcurrentHashMap messageHandlers;
 	private ErrorHandler errorHandler;
 }
