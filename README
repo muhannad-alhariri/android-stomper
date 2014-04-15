@@ -12,7 +12,7 @@ A Library based on StompJ on googlr groups
 
 
 How To Use?
-<pre>
+```
 Connection connection = new Connection("Server_NAME_OR_IP",
 				PORT_NUMBER, USER_NAME,
 				PASSWORD);
@@ -40,7 +40,7 @@ if(connection.isConnected()){
 				
 					mConnection.subscribe(queue, headers, true);
 }
-</pre>
+```
 
 
 <H2>Event Handling</h2>
