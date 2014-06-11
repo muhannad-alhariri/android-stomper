@@ -11,7 +11,7 @@ A Library based on StompJ on googlr groups
 * supports Server authentication with username and password
 
 
-How To Use?
+### How To Use?
 ```
 Connection connection = new Connection("Server_NAME_OR_IP",
 				PORT_NUMBER, USER_NAME,
@@ -43,7 +43,7 @@ if(connection.isConnected()){
 ```
 
 
-<H2>Event Handling</h2>
+### Event Handling
 
 <pre>
 connection.addMessageHandler(queue, new MessageHandler() {
@@ -58,7 +58,7 @@ connection.addMessageHandler(queue, new MessageHandler() {
   
   
   
-  <h2>Map Message Format:</h2>
+### Map Message Format: 
   We must send a json encded message with following format
   <pre>
   {
@@ -82,7 +82,7 @@ connection.addMessageHandler(queue, new MessageHandler() {
 
 </pre>
 
-<h2>Sending message to stomp server:<h2>
+### Sending message to stomp server 
 
 <pre>
 //t set headers property
